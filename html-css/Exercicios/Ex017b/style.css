@@ -1,0 +1,28 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:large;
+    box-shadow: 2px 2px 15px;
+    background-color: bisque;
+    font-weight: bolder;
+    font-style: italic;
+    display: flex;
+   
+    text-decoration: underline;
+
+}
+
+
+main{
+    margin: 20px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+
+h1{
+
+    font: arial bolder 3em italic 
+    }
+    /*shorthand font
+   font-style -> font- weight -> font-size -> font-family */
