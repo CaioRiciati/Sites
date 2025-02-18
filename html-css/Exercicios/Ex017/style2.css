@@ -1,0 +1,17 @@
+body{
+    background-color: blanchedalmond;
+    font-style: italic;
+    font-size: 20px;
+    color: #511b1b;
+    text-align: center;
+    
+}
+
+p{
+    font-style: normal;
+    font-size: 20px;
+    color: #511b1b;
+    text-align: justify;
+    text-indent: 30px;
+    
+}
