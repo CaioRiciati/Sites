@@ -1,0 +1,40 @@
+body{
+    background-color: #625e5e;
+    color: white;
+    font-family: sans-serif
+}
+
+a{
+    color: red;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:visited{
+    color: darkred;
+}
+
+a:hover{
+    text-decoration: line-through;
+    color: white;
+}
+
+a:active{
+    color:yellow
+}
+
+.especial::after{
+    content: '→';
+    text-decoration: none;
+    color: white;
+}
+
+.especial::before{
+ content: '♠';
+ color: pink;
+}
+
+.especial{
+    background-color: red;
+
+}
