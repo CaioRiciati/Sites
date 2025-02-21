@@ -13,11 +13,9 @@ body{
 
 header{
     background-color: rgb(96, 153, 92);
-    padding: 30px;
-    margin-bottom: 0px;
+
     margin: auto;
     box-shadow: inset 15px 15px 15px rgba(0, 0, 0, 0.442);
-    gap: 10px  ;
 
 
 }
@@ -110,7 +108,7 @@ article{
     margin-left: 70%;
     display: block;
     align-items: right;
-    margin-bottom: -5%;
+    margin-bottom: -1%;
 }
 
  main > nav{
@@ -129,4 +127,39 @@ iframe{
     width: 90%;
     height: 40vw;
     
+}
+
+section{
+    display: flex;
+}
+
+nav{
+    background-color: rgb(54, 87, 51);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    padding: 5px;
+    color: white;
+    text-align: center;
+
+
+}
+
+.final{
+    background-color: rgb(219, 255, 216);
+    margin: 10px;
+    margin-bottom: 10px;
+    border-radius: 15px;
+}
+
+.pequeno{
+    font-size: 13px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+footer{
+    background-color: black;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
 }
