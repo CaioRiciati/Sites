@@ -12,10 +12,13 @@ body{
 }
 
 header{
-    background-color: rgb(96, 153, 92);
+   background: linear-gradient( to bottom ,rgb(125, 175, 125), rgb(67, 88, 67));
 
     margin: auto;
     box-shadow: inset 15px 15px 15px rgba(0, 0, 0, 0.442);
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    margin: 0px;
 
 
 }
@@ -52,8 +55,10 @@ p{
 
 main{
     background-color: white;
-    margin: 80px;
+    margin: 20%;
     margin-top: 0px;
+    box-shadow: 3px 3px 20px;
+    border-radius: 15px;
 }
 
 .margemn{
@@ -123,10 +128,11 @@ article{
 
 iframe{
     margin: 5%;
-    border-radius: 15px;
+
     width: 90%;
     height: 40vw;
-    
+    border: 20px solid rgb(41, 63, 39);
+
 }
 
 section{
@@ -162,4 +168,8 @@ footer{
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
     color: white;
+}
+
+.h1{
+    margin: 0px;
 }
