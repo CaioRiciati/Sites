@@ -15,7 +15,6 @@ header{
    background: linear-gradient( to bottom ,rgb(125, 175, 125), rgb(67, 88, 67));
 
     margin: auto;
-    box-shadow: inset 15px 15px 15px rgba(0, 0, 0, 0.442);
     border-bottom-right-radius: 15px;
     border-bottom-left-radius: 15px;
     margin: 0px;
