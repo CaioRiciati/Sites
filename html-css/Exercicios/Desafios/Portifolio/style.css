@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+body{
+    background: linear-gradient(to right,black ,rgb(53, 53, 53) ,rgb(63, 63, 63));
+    color: white;
+    align-items: center;
+
+}
+
+img{
+    border-radius: 20px;
+    border-color: aqua;
+    padding: 15px;
+    height: 350px;
+    width: 302px;
+}
+
+section{
+
+}
+
+.do_lado{
+    display: flex;
+    align-items: center;
+    
+}
+
+p{
+    word-wrap: break-word 30px;
+    font-size: 2em;
+    margin: 15px;
+    font-family: poppins ;
+
+}
+
+main{
+    width: 750px;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0);
+    margin:auto;
+    margin-top: 150px;
+}
+
+.botão{
+    background-color: aquamarine;
+    padding: 20px 40px;
+    border-radius: 30px;
+    border: 30px;
+    font-family: fantasy;
+    font-size: 25px;
+    margin: 20px;
+    cursor: pointer;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+
+
+}
+
+.botão:hover{
+    background-color: rgb(88, 175, 146);
+}
+
+span{
+    color: rgb(64, 255, 191);
+}
+
+.b2{
+    margin-left: 30px;
+}
