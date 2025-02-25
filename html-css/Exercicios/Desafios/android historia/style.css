@@ -123,6 +123,7 @@ article{
     width: 50%;
     margin: auto;
     display: block;
+    max-width: 350px;
 
 }
 
