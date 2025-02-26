@@ -33,7 +33,7 @@ header{
     text-decoration: none;
     color: black;
     min-width: 10px;
-    transition-duration: 1s;
+    transition-duration: .5s;
     font-family:  'fontee';
     padding: 8px 10px
     
@@ -130,12 +130,12 @@ article{
 .img4 {
     width: 10%;
     margin: auto;
-    margin-left: 78%;
+    margin-left: 72%;
     display: block;
     align-items: right;
     max-width: 160px;
     min-width: 90px;
-    margin-top: -14%;
+    margin-top: -10%;
 }
 
  main > nav{
