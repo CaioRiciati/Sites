@@ -1,0 +1,136 @@
+@font-face {
+  font-family: 'burgao';
+  src: url('fonts/Bob\'s\ Burgers.ttf') format('truetype'); /* Adiciona o formato da fonte */
+}
+
+@font-face {
+  font-family: 'dudu';
+  src: url('fonts/Dudu_Calligraphy.ttf') format('truetype'); /* Adiciona o formato da fonte */
+}
+
+
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body {
+background-image: url('imagens/4844c10db206ec5e78e7f1e47c361b7f.jpg');
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+height: 100vh;
+position: relative;
+}
+
+body::before {
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background-color: rgba(50, 50, 50, 0.7);
+z-index: -1; /* Coloca o overlay atrás do conteúdo */
+}
+
+header {
+background-color: rgb(0, 0, 0);
+color: rgb(255, 255, 255);
+height: 120px;
+border-bottom-right-radius: 15px;
+border-bottom-left-radius: 15px;
+
+}
+
+:root { 
+  --marrom-escuro: #4E342E; 
+  --mostarda: #ff7b00; 
+  --secondary-text-color: #B0B0B0; 
+  --bordo2: #8B0000; 
+  --bordo: #A52A2A; 
+  --cinza-graffite: #333333; 
+}
+
+.voltar{
+  margin: 15px;
+ text-decoration: none;
+ color: var(--mostarda);
+ font-family: fantasy;
+ margin-bottom: 10px;
+ font-size: 36px;
+ transition: all 0.5s ease-in-out; /* Adicionando transição */
+}
+
+.voltar:hover{
+  background-color: rgb(0, 0, 0);
+  color: white;
+  border-radius: 10px;
+  padding: 2px 10px;
+
+}
+
+h1{
+  font-family: 'burgao';
+  font-size: 70px;
+  text-align: center;
+}
+
+p{
+font-size: 30px;
+min-width: 400px;
+padding: 10px;
+font-family: 'dudu';
+text-align: justify;
+}
+
+main{
+background-color: #B0B0B0;
+width: 900px;
+margin: auto;
+height: 400px;
+border-radius: 10px;
+box-shadow: 0px 0px 10px;
+margin-bottom: 20px;
+}
+
+.menu{
+margin: 15px;
+text-decoration: none;
+color: wheat;
+font-family: fantasy;
+margin-bottom: 10px;
+font-size: 20px;
+transition: all 0.5s ease-in-out; /* Adicionando transição */
+}
+
+.menu:hover{
+background-color: #333333;
+padding: 10px; 
+border-radius: 10px;
+}
+
+main {
+  padding: 20px;
+}
+
+h2{
+  font-family: 'burgao';
+  font-size: 50px;
+  text-align: center;
+}
+
+li{
+  font-size: 30px;
+  list-style: none;
+}
+
+
+.bacon{
+  display: block;
+  margin: 0;
+  margin: -10% 10% 10% -10%;
+  background-color: #4E342E;
+
+}
