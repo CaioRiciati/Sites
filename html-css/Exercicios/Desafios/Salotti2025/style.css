@@ -40,24 +40,25 @@
 
   }
 
-.container {
-    
-}
 
   .loginb{
     text-decoration: none;
     color: black;
     background-color: white;
-    box-shadow: 0px 0px 10px rgb(173, 173, 173);
+    box-shadow: 0px 0px 10px rgb(123, 158, 152);
     border: none;
     border-radius: 10px;
     width: 90%;
     transition-duration: 1s;
     margin: 10px;
+    margin-right: 10%;
+    margin-left: 5%;
   }
 
   button p {
     margin-top: -15px;
+    font-size: 18px;
+    color: rgb(122, 122, 122);
   }
 
   main h1 {
@@ -74,7 +75,7 @@
   }
 
   button:hover{
-    background-color: rgb(159, 228, 224);
+    background-color: rgb(184, 228, 226);
     cursor: pointer;
     width: 94%;
     height: 90%;
