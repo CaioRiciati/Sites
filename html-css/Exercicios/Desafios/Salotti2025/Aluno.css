@@ -1,0 +1,26 @@
+:root {
+    --verde-esmeralda: #5bb8ad;
+    --verde-petroleo: #264653;
+    --amarelo-suave: #E9C46A;
+    --laranja-terroso: #F4A261;
+  }
+
+  *{
+    margin: 0px;
+  }
+
+  body{
+    background-color: var(--verde-esmeralda);
+    
+  }
+
+  header{
+    background-color: #7af8e9;
+    padding: 25px;
+  }
+
+  header a{
+    text-decoration: none;
+    font-family: fantasy;
+
+  }
