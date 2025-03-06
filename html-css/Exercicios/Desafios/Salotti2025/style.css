@@ -22,7 +22,6 @@
     margin: auto;
     background-color: white;
     width: 50%;
-    text-align: center;
     border-radius: 20px;
 
   }
@@ -32,21 +31,6 @@
     --verde-esmeralda: #5bb8ad;
     padding: 3%; 
   }
-
-  .logo{
-    background-color: white;
-    width: 180px;
-    height: 180px;
-    border-radius: 10%;
-    align-items: center;
-    justify-content: center;
-    margin-top: 10% ;
-    margin-left: 50%;
-  }
-
-  .log{
-  }
-  
 
   header {
     background-color: #264653;
@@ -79,7 +63,6 @@
   main h1 {
     color: gray;
     text-align: start;
-    border-radius: 10%;
     margin-bottom: -10px;
     padding-left: 10px
 
@@ -93,9 +76,26 @@
   button:hover{
     background-color: rgb(159, 228, 224);
     cursor: pointer;
+    width: 94%;
+    height: 90%;
   }
 
   hr{
     margin-right: 10%;
     margin-left: 10%;
+  }
+
+  .seta{
+    width: 5%;
+    margin-top: -18px;
+    margin-right: 1%;
+
+  }
+
+  .lado{
+    display: flex;
+  }
+
+  button h1{
+    align-items: start;
   }
