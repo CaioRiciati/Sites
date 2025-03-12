@@ -1,0 +1,58 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --azulSalotti: #213f6b;
+    --azul: #2584D8;
+    --azulEscuro: #0E2A54;
+}
+
+body{
+    background-color: var(--azulEscuro);
+}
+
+header{
+    background-color: var(--azulSalotti);
+    height: 120px;
+    display: flex;
+    justify-content: space-between;
+}
+
+header h1 {
+    color: white;
+    font-size: 3em;
+    margin-bottom: 20px;
+
+}
+
+header img {
+    border-radius: 50%;
+    width: 93px;
+    height: 100px;
+    margin-top: 10px;
+    display: block;
+}
+
+header div{
+    display:  flex;
+}
+
+
+.infos{
+    display: inline;
+    width: 300px;
+}
+
+.infos a{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 1.5em;
+    margin-left: 1%;
+    padding:6px 15px ;
+    background: white;
+    border-radius: 10px;
+
+}
+
