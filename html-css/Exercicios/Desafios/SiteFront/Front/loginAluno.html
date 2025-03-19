@@ -19,7 +19,7 @@
             <hr>
             <p> Numero do RA: <textarea name="" id="textarea1" placeholder="Digite aqui..." rows="1" cols="15"></textarea></p>
             <p> Senha: <textarea name="" id="textarea2" placeholder="Digite aqui..." rows="1" cols="20"></textarea></p>
-            <button id="meuBotao" disabled>Enviar</button>
+            <button onclick="Enviar()" id="meuBotao" disabled>Enviar</button>
 
             <script>
                 const textarea1 = document.getElementById("textarea1");
@@ -30,7 +30,7 @@
                     const regex = /^[0-9x\n]*$/; // Apenas números, 'x' e quebras de linha
                     if (!regex.test(event.target.value)) {
                         event.target.value = event.target.value.replace(/[^0-9x\n]/g, ""); // Remove caracteres inválidos
-                    }
+                    }  
                 }
         
                 function verificarCampos() {
@@ -39,6 +39,11 @@
                     } else {
                         botao.disabled = true;
                     }
+                }
+
+                function Enviar(){
+                    console.log("FAZ ALGUMA COISA")
+                    
                 }
         
                 textarea1.addEventListener("input", validarEntrada);
