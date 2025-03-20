@@ -8,8 +8,14 @@
 </head>
 
 <body>
+  <header>
+    <div class="titulo">
+        <img class="imagem" src="Imagens/Minecraft-Logo-2011.png" alt="">
+    </div>
+  </header>
+
   <div class="video-background">
-    <iframe width="560" height="315" 
+    <iframe width="600" height="315" 
         src="https://www.youtube.com/embed/32yic4v7-5U?autoplay=1&mute=1&loop=1&playlist=32yic4v7-5U" 
         title="YouTube video player" frameborder="0" 
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
@@ -17,6 +23,7 @@
         allowfullscreen>
     </iframe> 
 </div>
+
 
   <div class="mc-menu">
     <div class="mc-button full">
@@ -34,14 +41,29 @@
           <div class="title">SIIIIIM!!</div>
         </div>
       </a>
-      <div class="mc-button full">
-        <div class="title" id="no">Não:(</div>
+      <div id="no" class="mc-button full">
+        <div class="title" ">Não :(</div>
       </div>
     </div>
     <div class="mc-button full lang">
       <div class="title"><img src="https://i.ibb.co/99187Lk/lang.png" alt=" Lang"/></div>
     </div>
   </div>
+
+  <script>
+document.getElementById('no').addEventListener('click', function() {
+    const button = this;
+    button.style.position = 'fixed';  // Garante que o botão não sofra mudanças de layout
+
+    const maxX = window.innerWidth - button.offsetWidth - 20;
+    const maxY = window.innerHeight - button.offsetHeight - 20;
+    const x = Math.max(0, Math.random() * maxX);
+    const y = Math.max(0, Math.random() * maxY);
+
+    button.style.left = `${x}px`;
+    button.style.top = `${y}px`;
+});
+</script>
 
 </body>
 </html>

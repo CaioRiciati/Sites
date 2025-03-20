@@ -136,3 +136,31 @@ iframe {
   font-size: 24px;
   padding-top: 50vh;
 }
+
+#no {
+  width: 195px;  /* Defina um tamanho fixo */
+  height: 42px;  /* Defina um tamanho fixo */
+  text-align: center;
+  line-height: 50px; /* Para centralizar o texto */
+  transition: transform 0.3s ease-in-out;
+}
+
+a{
+  text-decoration: none;
+}
+
+.imagem {
+width: 30%;
+height: auto;
+display: block;
+margin: auto;
+}
+
+.titulo{
+  position: relative; /* Define um ponto de referência */
+
+  background: rgba(0, 0, 0, 0);
+  align-items: center;
+
+  margin-top: -17%;
+}
