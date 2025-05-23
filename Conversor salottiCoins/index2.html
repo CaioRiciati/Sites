@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Salotticoins</title>
+    <link rel="stylesheet" href="conversor.css">
+
+    <style>
+body {
+                    font-family: 'Abril Fatface', serif, Georgia, 'Times New Roman', Times;
+                    background-color: #f2f3f7;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 100vh;
+                }
+
+                .container {
+                    background-color: #1f1c45;
+                    /*imagem de fundo*/
+                    width: 360px;
+                    height: 538px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                .form-box {
+                    background-color: rgba(255, 255, 255, 0.8);
+                    padding: 40px;
+                    border-radius: 20px;
+                    width: 55%;
+                    text-align: center;
+                }
+
+                .form-box h1 {
+                    font-size: 16px;
+                    margin-bottom: 25px;
+                    line-height: 1.5;
+                }
+
+                input[type="text"],
+                input[type="number"] {
+                    width: 75%;
+                    padding: 19px;
+                    margin: 10px 0;
+                    border: none;
+                    border-radius: 30px;
+                    background-color: #7d7d85;
+                    color: white;
+                    font-family: 'JetBrains Mono', Consolas, 'Courier New', monospace;
+                    text-align: center;
+                    font-size: 12px;
+                    outline: none;
+                }
+
+                input::placeholder {
+                    color: #fff;
+                    opacity: 0.8;
+                }
+
+                button {
+                    width: 70%;
+                    padding: 10px;
+                    border: none;
+                    border-radius: 25px;
+                    background-color: #34495e;
+                    color: white;
+                    font-family: 'JetBrains Mono', Consolas, 'Courier New', monospace;
+                    font-size: 12px;
+                    margin-top: 10px;
+                    cursor: pointer;
+                    transition: background 0.3s ease;
+                }
+
+                button:disabled {
+                    background-color: #34495e;
+                    cursor: not-allowed;
+                }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="form-box">
+            <h1>CONVERSOR<br>DE<br>SALOTTICOINS</h1>
+            <input type="text" id="codigo" placeholder="Código Comando..." />
+            <input type="number" id="valor" placeholder="Valor de Depósito..." />
+            <button id="validar" disabled>Validar Comanda</button>
+        </div>
+    </div>
+    <script>
+        const codigo = document.getElementById('codigo');
+        const valor = document.getElementById('valor');
+        const validar = document.getElementById('validar');
+        function validarCampos() {
+            if (codigo.value.trim() !== "" && valor.value.trim() !== "") {
+                validar.disabled = false;
+            } else {
+                validar.disabled = true;
+            }
+        }
+        codigo.addEventListener('input', validarCampos);
+        valor.addEventListener('input', validarCampos);
+    </script>
+</body>
+
+</html>
