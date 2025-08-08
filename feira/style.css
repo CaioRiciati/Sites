@@ -1,0 +1,14 @@
+body {
+    margin: 0;
+    display: flex;
+    background: linear-gradient( #0000007c), url('imagens/ChatGPT\ Image\ 8\ de\ ago.\ de\ 2025\,\ 11_51_28.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+header{
+    background-color: rgb(45, 49, 45);
+width: 100%;
+
+}
