@@ -1,14 +1,146 @@
-body {
-    margin: 0;
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(#00000088, #00000088), 
+                        url('imagens/ChatGPT\ Image\ 8\ de\ ago.\ de\ 2025\,\ 11_51_28.png');
+            background-size: cover;
+            background-attachment: fixed;
+            color: white;
+        }
+
+        header {
+            background-color: rgba(45, 49, 45, 0.95);
+            text-align: center;
+            padding: 20px;
+            box-shadow: 0 0 15px black;
+            margin-bottom: 5%;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+            letter-spacing: 2px;
+        }
+
+        header p {
+            margin: 5px 0 0;
+            font-size: 1.1rem;
+            color: #00ffcc;
+        }
+
+/* Layout em linha única */
+.container {
     display: flex;
-    background: linear-gradient( #0000007c), url('imagens/ChatGPT\ Image\ 8\ de\ ago.\ de\ 2025\,\ 11_51_28.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+    justify-content: center;
+    align-items: center;
+    gap: 40px; /* espaço maior entre imagens */
+    padding: 40px;
+    overflow-x: auto; /* permite scroll horizontal se não couber na tela */
 }
 
-header{
-    background-color: rgb(45, 49, 45);
-width: 100%;
-
+/* Cards maiores */
+.card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    cursor: pointer;
+    box-shadow: 0 0 20px rgba(0,0,0,0.7);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 380px; /* largura maior */
+    height: 250px; /* altura maior */
 }
+
+/* Alternando posições */
+.card:nth-child(odd) {
+    transform: translateY(-30px);
+}
+
+.card:nth-child(even) {
+    transform: translateY(30px);
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.card:hover {
+    transform: scale(1.05) translateY(0);
+    box-shadow: 0 0 25px #00ffcc;
+}
+
+.card:hover img {
+    transform: scale(1.15);
+    filter: brightness(1.2);
+}
+
+
+        /* Overlay “Clique para saber mais” */
+        .overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 15px;
+            background: rgba(0, 0, 0, 0.65);
+            text-align: center;
+            font-size: 1.1rem;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .card:hover .overlay {
+            opacity: 1;
+        }
+
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 10;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.85);
+            justify-content: center;
+            align-items: center;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .modal-content {
+            background: #222;
+            padding: 20px;
+            border-radius: 15px;
+            max-width: 600px;
+            text-align: center;
+            box-shadow: 0 0 20px #00ffcc;
+            animation: zoomIn 0.3s ease;
+        }
+
+        .modal-content img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 25px;
+            font-size: 2rem;
+            cursor: pointer;
+            color: white;
+        }
+
+        @keyframes fadeIn {
+            from {opacity: 0;}
+            to {opacity: 1;}
+        }
+
+        @keyframes zoomIn {
+            from {transform: scale(0.8);}
+            to {transform: scale(1);}
+        }

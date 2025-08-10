@@ -1,17 +1,75 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Robôs Ecológicos - Feira de Ciências</title>
     <link rel="stylesheet" href="style.css">
+
+
 </head>
 <body>
+
 <header>
-<h1>projeto feira de ciencias</h1>
-    
+    <h1>Projeto - Robôs Ecológicos 🤖</h1>
+    <p>Descubra como a tecnologia ajuda a salvar o planeta 🌱</p>
 </header>
 
-    
+<div class="container">
+    <div class="card" data-info="Robôs ecológicos usam baterias feitas de materiais biodegradáveis" data-img="imagens/robos1.jpeg">
+        <img src="imagens/robos1.jpeg" alt="Robô Coletor de Lixo">
+        <div class="overlay">Clique para saber mais</div>
+    </div>
+
+    <div class="card" data-info="Robôs agrícolas reduzem o uso de pesticidas em até 90%." data-img="imagens/robos2.jpeg">
+        <img src="imagens/robos2.jpeg" alt="Robô Plantador de Árvores">
+        <div class="overlay">Clique para saber mais</div>
+    </div>
+
+    <div class="card" data-info="🤖 Existem robôs que limpam oceanos recolhendo plástico flutuante." data-img="imagens/robos3.jpeg">
+        <img src="imagens/robos3.jpeg" alt="Robô Reciclador">
+        <div class="overlay">Clique para saber mais</div>
+    </div>
+
+    <div class="card" data-info="🌱 Robôs já plantam milhares de árvores por dia sozinhos." data-img="imagens/robos4.avif">
+        <img src="imagens/robos4.avif" alt="Robô Limpador de Oceanos">
+        <div class="overlay">Clique para saber mais</div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div id="modal" class="modal">
+    <span class="close" onclick="fecharModal()">&times;</span>
+    <div class="modal-content">
+        <img id="modal-img" src="">
+        <p id="modal-text"></p>
+    </div>
+</div>
+
+<script>
+    const cards = document.querySelectorAll('.card');
+    const modal = document.getElementById('modal');
+    const modalImg = document.getElementById('modal-img');
+    const modalText = document.getElementById('modal-text');
+
+    cards.forEach(card => {
+        card.addEventListener('click', () => {
+            modal.style.display = 'flex';
+            modalImg.src = card.getAttribute('data-img');
+            modalText.textContent = card.getAttribute('data-info');
+        });
+    });
+
+    function fecharModal() {
+        modal.style.display = 'none';
+    }
+
+    window.onclick = function(event) {
+        if (event.target === modal) {
+            fecharModal();
+        }
+    }
+</script>
+
 </body>
 </html>
