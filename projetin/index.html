@@ -38,6 +38,10 @@
     /* small visual footer button to reset for demo */
     .footer{display:flex;justify-content:center;margin-top:14px}
     .btn{background:transparent;border:1px solid rgba(230,238,248,0.08);padding:8px 12px;border-radius:10px;color:var(--text);font-size:14px;cursor:pointer}
+
+    .a{
+        text-decoration: none;
+    }
   </style>
 </head>
 <body>
@@ -61,9 +65,9 @@
         <div class="card" data-action="remove"><div class="name-text">7. Elves</div></div>
         <div class="card" data-action="remove"><div class="name-text">8. Esther</div></div>
         <div class="card" data-action="remove"><div class="name-text">9. Gustavo</div></div>
-                <div class="card home" data-action="home" data-redirect="/Sites/projetin/home.html">
-          <div class="name-text">10. Caio</div>
-        </div>
+
+          <div class="name-text"><a href="home.html" class="a">10. Caio</a></div>
+
         <div class="card" data-action="remove"><div class="name-text">11. Gabriela</div></div>
         <div class="card" data-action="remove"><div class="name-text">12. Isabelly</div></div>
         <div class="card" data-action="remove"><div class="name-text">13. Italo</div></div>
