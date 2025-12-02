@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lista de Nomes (mobile)</title>
+  <style>
+    :root{--bg:#0f172a;--card:#0b1220;--accent:#06b6d4;--text:#e6eef8}
+    *{box-sizing:border-box}
+
+
+    html,body{
+    height:100%;
+    margin:0;
+    font-family:Inter,system-ui,Segoe UI,Roboto,Arial;
+    color:var(--text);
+    background:linear-gradient(180deg,#081224 0%, #071827 100%)}
+
+
+    .wrap{max-width:480px;
+        margin:0 auto;
+        padding:18px}
+
+    header{display:flex;align-items:center;gap:12px;margin-bottom:12px}
+    .logo{width:46px;height:46px;border-radius:10px;background:rgba(255,255,255,0.04);display:flex;align-items:center;justify-content:center;font-weight:700}
+    h1{font-size:18px;margin:0}
+
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px}
+    .card{background:var(--card);padding:14px;border-radius:12px;display:flex;align-items:center;justify-content:center;min-height:56px;cursor:pointer;user-select:none;touch-action:manipulation;transition:transform .12s ease,opacity .18s ease,visibility .18s ease}
+    .card:active{transform:translateY(2px) scale(.998)}
+    /* quando 'removing' fica invisível mas mantém espaço */
+    .card.removing{opacity:0;visibility:hidden;}
+    .card.home{outline:2px solid rgba(6, 181, 212, 0)}
+    .name-text{font-size:15px;line-height:1}
+
+    .hint{font-size:13px;color:rgba(230,238,248,.7);margin-top:12px;text-align:center}
+
+    /* small visual footer button to reset for demo */
+    .footer{display:flex;justify-content:center;margin-top:14px}
+    .btn{background:transparent;border:1px solid rgba(230,238,248,0.08);padding:8px 12px;border-radius:10px;color:var(--text);font-size:14px;cursor:pointer}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div>
+        <h1>Qual desses é seu aluno favorito?</h1>
+        <div style="font-size:13px;color:rgba(230,238,248,.8)">escolha apenas um</div>
+      </div>
+    </header>
+
+    <main>
+      <div class="grid" id="namesGrid">
+
+        <div class="card" data-action="remove"><div class="name-text">1. Ana</div></div>
+        <div class="card" data-action="remove"><div class="name-text">2. Vanessa</div></div>
+        <div class="card" data-action="remove"><div class="name-text">3. Vitoria</div></div>
+        <div class="card" data-action="remove"><div class="name-text">4. Amanda</div></div>
+        <div class="card" data-action="remove"><div class="name-text">5. Bruce</div></div>
+        <div class="card" data-action="remove"><div class="name-text">6. Davi</div></div>
+        <div class="card" data-action="remove"><div class="name-text">7. Elves</div></div>
+        <div class="card" data-action="remove"><div class="name-text">8. Esther</div></div>
+        <div class="card" data-action="remove"><div class="name-text">9. Gustavo</div></div>
+                <div class="card home" data-action="home" data-redirect="/home.html">
+          <div class="name-text">10. Caio</div>
+        </div>
+        <div class="card" data-action="remove"><div class="name-text">11. Gabriela</div></div>
+        <div class="card" data-action="remove"><div class="name-text">12. Isabelly</div></div>
+        <div class="card" data-action="remove"><div class="name-text">13. Italo</div></div>
+        <div class="card" data-action="remove"><div class="name-text">14. Jeniffer</div></div>
+        <div class="card" data-action="remove"><div class="name-text">15. Julia</div></div>
+        <div class="card" data-action="remove"><div class="name-text">16. Kamily</div></div>
+        <div class="card" data-action="remove"><div class="name-text">17. Caique</div></div>
+        <div class="card" data-action="remove"><div class="name-text">18. Rafael</div></div>
+        <div class="card" data-action="remove"><div class="name-text">19. Wennes</div></div>
+        <div class="card" data-action="remove"><div class="name-text">20. Wallace</div></div>
+        <div class="card" data-action="remove"><div class="name-text">21. Yohan</div></div>
+        <div class="card" data-action="remove"><div class="name-text">22. Jaqueline</div></div>
+        <div class="card" data-action="remove"><div class="name-text">23. Igor</div></div>
+        <div class="card" data-action="remove"><div class="name-text">24. Wellington</div></div>
+
+      </div>
+
+
+      <div class="footer">
+        <button class="btn" id="resetBtn">Resetar (demo)</button>
+      </div>
+    </main>
+  </div>
+
+  <script>
+    (function(){
+      const grid = document.getElementById('namesGrid');
+      const resetBtn = document.getElementById('resetBtn');
+
+      // Delegação de evento: trata clicks em qualquer .card
+      grid.addEventListener('click', function(e){
+        const card = e.target.closest('.card');
+        if(!card) return;
+        const action = card.dataset.action;
+
+        if(action === 'remove'){
+          // apenas adiciona a classe que torna invisível, mantendo o espaço
+          card.classList.add('removing');
+        } else if(action === 'home'){
+          // redireciona para a URL definida no data-redirect
+          const url = card.dataset.redirect || '/';
+          window.location.href = url;
+        }
+      });
+
+      // botão de reset — recarrega a página para restaurar o estado original
+      resetBtn.addEventListener('click', function(){
+        location.reload();
+      });
+
+      // melhora de acessibilidade: permitir ativar com Enter/Space
+      grid.addEventListener('keydown', function(e){
+        const card = e.target.closest('.card');
+        if(!card) return;
+        if(e.key === 'Enter' || e.key === ' '){
+          e.preventDefault();
+          card.click();
+        }
+      });
+
+      // tornar cada card focável por teclado
+      Array.from(grid.querySelectorAll('.card')).forEach(c=>c.setAttribute('tabindex','0'));
+    })();
+  </script>
+</body>
+</html>
